@@ -1,0 +1,210 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -o-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+body{
+    background-color: #FFF; 
+    font-family:sans-serif;
+}
+header {
+    padding: 15px;
+    background:#000837;
+    text-align:center;
+    color:#FFF;
+    font-family: cursive; 
+}
+section{
+    width: 75%;
+    float:left;
+    padding-top:35px;
+}
+aside{
+    width: 25%;
+    float:left;
+    background: #00b0f9;
+    padding:35px 15px 15px;
+    color:#FFF;
+}
+.csv-error {
+    position: absolute;
+    top: 75px;
+    color: #fff;
+    text-align: center;
+    width:100%;
+    display:none;
+}
+.csv-error span {
+    margin: 0 auto;
+    width: 350px;
+    background-color: red;
+    padding: 5px;
+    border-radius: 5px;
+}
+.canvas-container {
+    width:705px;
+    margin: 0 auto;
+}
+.wrapper{
+    position:relative;
+    float: left;
+    width:350px;
+}
+#tip{
+    background-color:#00b0f9; 
+    border:1px solid #005577; 
+    border-radius:5px;
+    position:absolute; 
+    left:-200px; 
+    top:100px;
+    visibility:hidden;
+    z-index: 5;
+}
+.graph-title {
+    float:left;
+    width:100%;
+    color:#000837;
+    text-align:center;
+}
+#editButton,
+#removeButton {
+    display:none;
+}
+.radio-wrap,
+.options-wrap {
+    width:50%;
+    float:left;
+}
+input[type=text]{
+    border:1px solid #CCC;
+    padding: 5px;
+    width:100%;
+}
+.options-wrap {
+    padding-right:10px;
+    margin-top:10px;
+}
+.options-wrap label {
+    padding-bottom: 5px;
+    float:left;
+}
+.button-wrap input{
+    width: 30%;
+    float:left;
+    padding:8px 0;
+    border:0;   
+    color:#fff;
+    cursor:pointer;
+}
+.button-wrap {
+    padding-right:10px;
+    margin-top:15px;
+    float:left;
+    width:100%;
+}
+.button-wrap input:first-child,
+.csv-download input{
+    background:#34b034;
+}
+.button-wrap input:nth-child(2){
+    margin:0 5%;
+    background:#171717;
+}
+.button-wrap input:last-child{
+    float:right;
+    background:#bf1515;
+}
+.options-wrap  span {
+    float:left;
+    color: #ff0000;
+    display: none;
+    font-size:12px;
+    padding-top:5px;
+}
+.csv-download,
+.csv-upload {
+    width:50%;
+    padding-right:10px;
+    float:left;
+}
+.csv-download input,
+.csv-upload input {
+    width:100%;
+    padding:8px 0;
+    border:0;
+    color:#FFF;
+    cursor:pointer;
+}
+h3 {
+    width:100%;
+    text-align:center;
+    float:left;
+    padding:15px;
+}
+h3.csv-options {
+    margin-top:65px;
+}
+.csv-upload{
+    position:relative;
+}
+.csv-upload input {
+    float:left;
+    background:#bf1515;
+}
+#uploadCsv{
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
+}
+input[type=radio]:not(old){
+  width     : 2em;
+  margin    : 0;
+  padding   : 0;
+  font-size : 1em;
+  opacity   : 0;
+}
+
+input[type=radio   ]:not(old) + label{
+  display      : inline-block;
+  margin-left  : -2em;
+  line-height  : 1.5em;
+}
+input[type=radio   ]:not(old) + label > span{
+  display          : inline-block;
+  width            : 0.875em;
+  height           : 0.875em;
+  margin           : 0.25em 0.5em 0.25em 0.25em;
+  border           : 0.0625em solid rgb(192,192,192);
+  border-radius    : 0.5em;
+  background       : rgb(255,255,255);
+  vertical-align   : bottom;
+}
+
+input[type=radio   ]:not(old) + label > span,
+input[type=radio   ]:not(old):checked + label > span{
+  background-image :    -moz-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :     -ms-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :      -o-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image : -webkit-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :         linear-gradient(rgb(224,224,224),rgb(240,240,240));
+}
+
+input[type=radio]:not(old):checked +  label > span > span{
+  display          : block;
+  width            : 0.5em;
+  height           : 0.5em;
+  margin           : 0.125em;
+  border           : 0.0625em solid rgb(115,153,77);
+  border-radius    : 0.5em;
+  background       : rgb(0,176,249);
+  background-image :    -moz-linear-gradient(rgb(0,176,249),rgb(15,160,255));
+  background-image :     -ms-linear-gradient(rgb(0,176,249),rgb(15,160,255));
+  background-image :      -o-linear-gradient(rgb(0,176,249),rgb(15,160,255));
+  background-image : -webkit-linear-gradient(rgb(0,176,249),rgb(15,160,255));
+  background-image :         linear-gradient(rgb(0,176,249),rgb(15,160,255));
+}

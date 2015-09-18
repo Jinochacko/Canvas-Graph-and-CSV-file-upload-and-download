@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" media="all" href="css/main.css" /> 
+    </head>
+    <body onload="setHeight()">
+        <div class="csv-error" id="csvErrorMessage">
+            <span>Please upload csv file with correct format</span>
+        </div>
+        <header id="header">
+           <h2>Canvas Graph</h2>
+        </header>
+        <section id="main_section">
+            <div class="canvas-container">
+                <div class="wrapper">
+                    <h2 class="graph-title">Left graph</h2>
+                    <canvas id="graph" width=350 height=450></canvas>
+                    <canvas id="tip" width=130 height=25></canvas>
+                </div>
+                <div class="wrapper">
+                    <h2 class="graph-title">Right graph</h2>
+                    <canvas id="graph1" width=350 height=450></canvas>
+                </div>
+            </div>
+        </section>
+        <aside id="aside">
+            <h3>Graph Options</h3>
+            <div class="radio-wrap">
+                <input id="graphRadio" type="radio" name="graph" value="graph" checked="checked" onchange="radioCheck();">
+                <label for="graphRadio"><span><span></span></span>Graph Left</label>
+            </div>
+            <div>
+                <input id="graphRadio1" type="radio" name="graph" value="graph1" onchange="radioCheck();">
+                <label for="graphRadio1"><span><span></span></span>Graph Right</label>
+            </div>
+            <div class="options-wrap">
+                <label>Index</label>
+                <input type="text" id="customY" placeholder="Index" />
+                <span id="indexError">Number value required</span>
+            </div>
+            <div class="options-wrap">
+                <label>Value</label>
+                <input type="text" id="customX" placeholder="Value" />
+                <span id="valueError">Number value required</span>
+            </div>
+            <div class="button-wrap">
+                <input type="button" id="addButton" value="Add" onclick="addNewEntry();" />
+                <input type="button" id="editButton" value="Edit" onclick="editOrRemoveValues('edit');" />
+                <input type="button" id="removeButton" value="Remove" onclick="editOrRemoveValues('remove');" />
+            </div>
+            <h3 class="csv-options" id="csvHead">Csv Options for Left Graph</h3>
+            <div class="csv-download">
+                <input type="button" value="Download" onclick="downloadCSV();" />
+            </div>
+            <div class="csv-upload">
+                <input type="button" value="Upload" />
+                <input type="file" name="File Upload" id="uploadCsv" accept=".csv" />
+            </div>
+            <div class="csv-download">
+                <input type="button" value="Convert into image" onclick="convertToImage();" />
+            </div>
+        </aside>
+	<img src="" id="canvas_image">
+	   <script type="text/javascript" src="js/graph.js"></script>
+	    <script type="text/javascript" src="js/csv_handler.js"></script>
+	    <script type="text/javascript" src="js/graph_to_image.js"></script>
+    </body>
+</html>
